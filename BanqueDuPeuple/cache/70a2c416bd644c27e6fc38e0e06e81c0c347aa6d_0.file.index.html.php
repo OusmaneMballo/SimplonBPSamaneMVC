@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2020-07-27 17:01:44
+  from "/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/client/index.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5f1eec58ec45d9_05647971',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '70a2c416bd644c27e6fc38e0e06e81c0c347aa6d' => 
+    array (
+      0 => '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/client/index.html',
+      1 => 1595862092,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5f1eec58ec45d9_05647971 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +30,10 @@
     <meta name="description" content="Gestion des activites bancaires"/>
     <meta name="author" content="mballoSoft"/>
     <title>Add | Client</title>
-    <link rel="stylesheet" href="{$url_base}/public/css/main.css"/>
-    <link rel="stylesheet" href="{$url_base}/public/css/client.css"/>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/css/main.css"/>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/css/client.css"/>
 </head>
 <body>
 <header>
@@ -19,16 +45,19 @@
 <!--=========Debut sideBarre============-->
 <aside class="sidebarre">
     <div class="flex">
-        <img src="{$url_base}/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
+        <img src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
         <p class="mail">xywzt@gmail.com</p>
         <div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
             Dashboard
         </div>
         <div class="contener">
-            <a href="{$url_base}/compte/index">Compte</a>
+            <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/compte/index">Compte</a>
         </div>
         <div class="contener">
-            <a href="{$url_base}/client/index">Client</a>
+            <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/client/index">Client</a>
         </div>
         <div class="contener">
             Logout
@@ -136,7 +165,15 @@
     </fieldset>
     <div id="affiche"></div>
 </article>
-<script src="{$url_base}/public/js/main.js"></script>
-<script src="{$url_base}/public/js/client.js"></script>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/js/main.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/js/client.js"><?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}
