@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../DITI/BanqueDuPeupleV2/.idea/BanqueDuPeupleV2.iml" filepath="$PROJECT_DIR$/../../DITI/BanqueDuPeupleV2/.idea/BanqueDuPeupleV2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/BanquePeupleSamane.iml" filepath="$PROJECT_DIR$/.idea/BanquePeupleSamane.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TPphpProcedural/.idea/TPphpProcedural.iml" filepath="$PROJECT_DIR$/../TPphpProcedural/.idea/TPphpProcedural.iml" />
       <module fileurl="file://$PROJECT_DIR$/../TpBPNameSpace/.idea/TpBPNameSpace.iml" filepath="$PROJECT_DIR$/../TpBPNameSpace/.idea/TpBPNameSpace.iml" />
     </modules>
   </component>
