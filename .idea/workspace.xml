@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2265d3ff-c5a8-42aa-87f1-28b55633bf64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BanqueDuPeuple/src/controller/ClientController.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BanqueDuPeuple/src/controller/CompteController.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BanqueDuPeuple/src/model/ClientMoralRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BanqueDuPeuple/cache/0f747c1622556ebbd11d7803180563e2f4ac3e8a_0.file.index.html.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BanqueDuPeuple/cache/20cb909e317e58f2c65a48b42ef72849b883a8c2_0.file.index.html.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BanqueDuPeuple/cache/72dcd861781857033210d000349dea9ca0a8cc21_0.file.index.html.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BanqueDuPeuple/cache/c76fb8385817fa2cdeecb20b7620ddfac0fc408e_0.file.get_id.html.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BanqueDuPeuple/src/view/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BanqueDuPeuple/src/view/client/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BanqueDuPeuple/src/view/compte/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BanqueDuPeuple/src/view/compte/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BanqueDuPeuple/src/view/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BanqueDuPeuple/src/view/welcome/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TPphpProcedural/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TPphpProcedural/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TPphpProcedural/traittementcompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/../TPphpProcedural/traittementcompte.php" afterDir="false" />
     </list>
@@ -24,28 +17,46 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/controller/CompteController.class.php">
+        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/welcome/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+            <state relative-caret-position="713">
+              <caret line="139" column="55" lean-forward="true" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/client/index.html">
+        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/model/ClientMoralRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+            <state relative-caret-position="396">
+              <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/entities/ClientMoral.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/model/TestRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/compte/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -87,8 +98,10 @@
         <option value="$PROJECT_DIR$/BanqueDuPeuple/src/controller/ClientController.class.php" />
         <option value="$PROJECT_DIR$/BanqueDuPeuple/src/controller/CompteController.class.php" />
         <option value="$PROJECT_DIR$/BanqueDuPeuple/src/view/welcome/index.html" />
-        <option value="$PROJECT_DIR$/BanqueDuPeuple/src/view/compte/index.html" />
         <option value="$PROJECT_DIR$/BanqueDuPeuple/src/view/client/index.html" />
+        <option value="$PROJECT_DIR$/BanqueDuPeuple/src/view/compte/index.html" />
+        <option value="$PROJECT_DIR$/BanqueDuPeuple/src/model/ClientRepository.php" />
+        <option value="$PROJECT_DIR$/BanqueDuPeuple/src/model/ClientMoralRepository.php" />
       </list>
     </option>
   </component>
@@ -120,12 +133,6 @@
               <item name="BanquePeupleSamane" type="b2602c69:ProjectViewProjectNode" />
               <item name="BanquePeupleSamane" type="462c0819:PsiDirectoryNode" />
               <item name="BanqueDuPeuple" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BanquePeupleSamane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BanquePeupleSamane" type="462c0819:PsiDirectoryNode" />
-              <item name="BanqueDuPeuple" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -133,7 +140,14 @@
               <item name="BanquePeupleSamane" type="462c0819:PsiDirectoryNode" />
               <item name="BanqueDuPeuple" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BanquePeupleSamane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BanquePeupleSamane" type="462c0819:PsiDirectoryNode" />
+              <item name="BanqueDuPeuple" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BanquePeupleSamane" type="b2602c69:ProjectViewProjectNode" />
@@ -230,12 +244,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595846404356</updated>
-      <workItem from="1595846406145" duration="6303000" />
+      <workItem from="1595846406145" duration="8830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6303000" />
+    <option name="totallyTimeSpent" value="8830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1274" height="773" extended-state="6" />
@@ -284,13 +298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/entities/ClientMoral.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -352,13 +359,6 @@
         <state relative-caret-position="-272" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/compte/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/welcome/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -366,10 +366,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/compte/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/view/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        <state relative-caret-position="713">
+          <caret line="139" column="55" lean-forward="true" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/model/TestRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/entities/ClientMoral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BanqueDuPeuple/src/model/ClientMoralRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
         </state>
       </provider>
     </entry>
