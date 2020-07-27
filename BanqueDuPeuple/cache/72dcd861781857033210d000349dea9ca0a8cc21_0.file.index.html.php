@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-07-27 14:41:32
+/* Smarty version 3.1.30, created on 2020-07-27 16:26:22
   from "/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/welcome/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f1ecb7c3f8151_40333705',
+  'unifunc' => 'content_5f1ee40e6896f7_26865133',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '72dcd861781857033210d000349dea9ca0a8cc21' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/welcome/index.html',
-      1 => 1595846732,
+      1 => 1595859965,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,75 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f1ecb7c3f8151_40333705 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f1ee40e6896f7_26865133 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="Gestion des activites bancaires"/>
+	<meta name="author" content="mballoSoft"/>
+	<title>Add | Client</title>
+	<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/css/main.css"/>
+	<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/css/compte.css"/>
+	<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/css/client.css"/>
+</head>
+<body>
+<header>
+	<nav>
+		<h1>Banque Du <span style="color: aliceblue;">Peuple</span></h1>
+	</nav>
+</header>
+
+<!--=========Debut sideBarre============-->
+<aside class="sidebarre">
+	<div class="flex">
+		<img src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
+		<p class="mail">xywzt@gmail.com</p>
+		<div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
+			Dashboard
+		</div>
+		<div class="contener">
+			<a href="./compte.php">Compte</a>
+		</div>
+		<div class="contener">
+			<a href="./client.php">Client</a>
+		</div>
+		<div class="contener">
+			Logout
+		</div>
+	</div>
+</aside>
+<!--=========Fin sideBarre============-->
+
+<!--=========Contenu du body==========-->
+<article class="content">
+
+</article>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/public/js/main.js"><?php echo '</script'; ?>
+>
+</body>
+</html>
+<!--
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Welcome</title>
-		<!-- l'appel de <?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
- vous permet de recupérer le chemin de votre site web  -->
+		&lt;!&ndash; l'appel de <?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+ vous permet de recupérer le chemin de votre site web  &ndash;&gt;
 		<link type="text/css" rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
 public/css/bootstrap.min.css"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
 public/css/samane.css"/>
-		<!-- integration de javascript dans le moteur de rendu de vue Smarty -->
+		&lt;!&ndash; integration de javascript dans le moteur de rendu de vue Smarty &ndash;&gt;
 		
 			<?php echo '<script'; ?>
  language=javascript>
@@ -48,8 +103,8 @@ public/css/samane.css"/>
 	<body onload="load_design()">
 		<div class="nav navbar navbar-default navbar-fixed-top">
 			<ul class="nav navbar-nav">
-				<!-- l'appel de <?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
- vous permet de recupérer le chemin de votre site web  -->
+				&lt;!&ndash; l'appel de <?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+ vous permet de recupérer le chemin de votre site web  &ndash;&gt;
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
 ">Accueil</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
@@ -89,5 +144,7 @@ public/image/logo.jpg" class="resize" />
 		</div>
 	</body>
 </html>
+-->
+
 <?php }
 }

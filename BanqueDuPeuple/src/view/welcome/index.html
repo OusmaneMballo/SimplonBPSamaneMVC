@@ -1,12 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="Gestion des activites bancaires"/>
+	<meta name="author" content="mballoSoft"/>
+	<title>Add | Client</title>
+	<link rel="stylesheet" href="{$url_base}/public/css/main.css"/>
+	<link rel="stylesheet" href="{$url_base}/public/css/compte.css"/>
+	<link rel="stylesheet" href="{$url_base}/public/css/client.css"/>
+</head>
+<body>
+<header>
+	<nav>
+		<h1>Banque Du <span style="color: aliceblue;">Peuple</span></h1>
+	</nav>
+</header>
+
+<!--=========Debut sideBarre============-->
+<aside class="sidebarre">
+	<div class="flex">
+		<img src="{$url_base}/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
+		<p class="mail">xywzt@gmail.com</p>
+		<div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
+			Dashboard
+		</div>
+		<div class="contener">
+			<a href="{$url_base}/src/view/compte/index.php">Compte</a>
+		</div>
+		<div class="contener">
+			<a href="{$url_base}/src/view/client/index.php">Client</a>
+		</div>
+		<div class="contener">
+			Logout
+		</div>
+	</div>
+</aside>
+<!--=========Fin sideBarre============-->
+
+<!--=========Contenu du body==========-->
+<article class="content">
+
+</article>
+<script src="{$url_base}/public/js/main.js"></script>
+</body>
+</html>
+<!--
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Welcome</title>
-		<!-- l'appel de {$url_base} vous permet de recupérer le chemin de votre site web  -->
+		&lt;!&ndash; l'appel de {$url_base} vous permet de recupérer le chemin de votre site web  &ndash;&gt;
 		<link type="text/css" rel="stylesheet" href="{$url_base}public/css/bootstrap.min.css"/>
 		<link type="text/css" rel="stylesheet" href="{$url_base}public/css/samane.css"/>
-		<!-- integration de javascript dans le moteur de rendu de vue Smarty -->
+		&lt;!&ndash; integration de javascript dans le moteur de rendu de vue Smarty &ndash;&gt;
 		{literal}
 			<script language=javascript>
 			function load_design() {
@@ -19,7 +67,7 @@
 	<body onload="load_design()">
 		<div class="nav navbar navbar-default navbar-fixed-top">
 			<ul class="nav navbar-nav">
-				<!-- l'appel de {$url_base} vous permet de recupérer le chemin de votre site web  -->
+				&lt;!&ndash; l'appel de {$url_base} vous permet de recupérer le chemin de votre site web  &ndash;&gt;
 				<li><a href="{$url_base}">Accueil</a></li>
 				<li><a href="{$url_base}Test/index">Menu test page </a></li>
 				<li><a href="{$url_base}Test/getID/1">Menu test get id page </a></li>
@@ -49,3 +97,5 @@
 		</div>
 	</body>
 </html>
+-->
+

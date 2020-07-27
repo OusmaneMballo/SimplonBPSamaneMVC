@@ -4,7 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="TpBPNameSpace" />
     <orderEntry type="module" module-name="BanqueDuPeupleV2" />
     <orderEntry type="module" module-name="TPphpProcedural" />
   </component>
