@@ -57,7 +57,7 @@ class Compte
 
     /**
      * Many compte have one type_compte. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="TypeCompte", inversedBy="compte")
+     * @ORM\ManyToOne(targetEntity="TypeCompteRepository", inversedBy="compte")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type;

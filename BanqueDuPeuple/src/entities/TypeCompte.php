@@ -28,7 +28,7 @@ class TypeCompte
     private $compte;
 
     /**
-     * TypeCompte constructor.
+     * TypeCompteRepository constructor.
      */
     public function __construct()
     {

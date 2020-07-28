@@ -4,9 +4,12 @@
 namespace src\model;
 
 
-class ClientMoralRepository
+use libs\system\Model;
+
+class ClientPhysiqueRepository extends Model
 {
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
     }
 
@@ -14,7 +17,7 @@ class ClientMoralRepository
     {
         if($this->db != null)
         {
-            return $this->db->getRepository('ClientMoral')->find(array('id' => $id));
+            return $this->db->getRepository('ClientPhysique')->find(array('id' => $id));
         }
     }
 
@@ -32,7 +35,7 @@ class ClientMoralRepository
     public function deleteClient($id){
         if($this->db != null)
         {
-            $client = $this->db->find('ClientMoral', $id);
+            $client = $this->db->find('ClientPhysique', $id);
             if($client != null)
             {
                 $this->db->remove($client);
@@ -46,20 +49,21 @@ class ClientMoralRepository
     public function updateClient($client){
         if($this->db != null)
         {
-            $getClient = $this->db->find('ClientMoral', $client->getId());
+            $getClient = $this->db->find('ClientPhysique', $client->getId());
             if($getClient != null)
             {
                 $getClient->setNom($client->getNom());
-                $getClient->setRaisonsocial($client->getRaisonsocial());
+                $getClient->setPrenom($client->getPrenom());
                 $getClient->setAdresse($client->getAdresse());
-                $getClient->setNumIdentifiant($client->getNumIdentifiant());
+                $getClient->setSalaire($client->getSalaire());
                 $getClient->setTelephone($client->getTelephone());
                 $getClient->setEmail($client->getEmail());
                 $getClient->setLogin($client->getLogin());
                 $getClient->setPasswd($client->getPasswd());
-                $getClient->setClient_physique($client->getClient_physique());
-                $getClient->setCompte($client->getCompte());
-
+                $getClient->setProfession($client->getProfession());
+                $getClient->setNci($client->getNci());
+                $getClient->setTypeClient($client->getTypeClient());
+                $getClient->setClientMoral($client->getClientMoral());
                 $this->db->flush();
 
             }else {
@@ -71,7 +75,7 @@ class ClientMoralRepository
     public function listeClient(){
         if($this->db != null)
         {
-            return $this->db->createQuery("SELECT c FROM ClientMoral c")->getResult();
+            return $this->db->createQuery("SELECT c FROM ClientPhysique c")->getResult();
         }
     }
 
@@ -79,7 +83,7 @@ class ClientMoralRepository
     {
         if($this->db != null)
         {
-            return $this->db->getRepository('ClientMoral')->findBy(array('id' => $id));
+            return $this->db->getRepository('ClientPhysique')->findBy(array('id' => $id));
         }
     }
 
@@ -87,7 +91,7 @@ class ClientMoralRepository
     {
         if($this->db != null)
         {
-            return $this->db->createQuery("SELECT c FROM ClientMoral c WHERE c.id = " . $id)->getSingleResult();
+            return $this->db->createQuery("SELECT c FROM ClientPhysique c WHERE c.id = " . $id)->getSingleResult();
         }
     }
 
@@ -95,7 +99,8 @@ class ClientMoralRepository
     {
         if($this->db != null)
         {
-            return $this->db->getRepository('ClientMoral')->findAll();
+            return $this->db->getRepository('ClientPhysique')->findAll();
         }
     }
+
 }
