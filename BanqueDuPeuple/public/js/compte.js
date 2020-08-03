@@ -26,7 +26,6 @@ function verificationCompte() {
         typeCompte.style("border: solid 1px red;");
         return false;
     }
-
     let client = document.getElementById("client");
     choix = client.selectedIndex;
     type = client.options[choix].text;
@@ -47,7 +46,7 @@ function frais(){
     let choix = typeCompte.selectedIndex;
     let type = typeCompte.options[choix].text;
 
-    if (type === "Xewel | Epargne") {
+    if (type === "Xewel" || type === "Epargne") {
         document.getElementById('frai').innerHTML = "450F cfa";
     }
     else {

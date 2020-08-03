@@ -174,18 +174,3 @@ function post(){
         return false;
     }
 }
-
-/*
-    typeClient.addEventListener('change', function(e) {
-    alert(typeClient.value);
-    infoNouveauClientMoral.style.display = 'none';
-    if (typeClient.value == '1') {
-
-        infoClientPhysique.style.display = 'block';
-        infoAncienClient.style.display = 'none';
-        infoNouveauClientPhysique.style.display = 'block'
-        clientMoral.style.display = 'none';
-        infoClientPhysiqueSalarie.style.display = 'none';
-        infoAncienClientMoral.style.display = 'none';
-        viderCli
-*/

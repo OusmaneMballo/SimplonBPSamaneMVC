@@ -10,75 +10,74 @@
     <link rel="stylesheet" href="{$url_base}/public/css/client.css"/>
 </head>
 <body>
-<header>
-    <nav>
-        <h1>Banque Du <span style="color: aliceblue;">Peuple</span></h1>
-    </nav>
-</header>
-
+    <header>
+        <nav>
+            <h1>Banque Du <span style="color: aliceblue;">Peuple</span></h1>
+        </nav>
+    </header>
 <!--=========Debut sideBarre============-->
-<aside class="sidebarre">
-    <div class="flex">
-        <img src="{$url_base}/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
-        <p class="mail">xywzt@gmail.com</p>
-        <div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
-            <a href="{$url_base}/welcome/index">Dashboard</a>
+    <aside class="sidebarre">
+        <div class="flex">
+            <img src="{$url_base}/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
+            <p class="mail">xywzt@gmail.com</p>
+            <div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
+                <a href="{$url_base}/welcome/index">Dashboard</a>
+            </div>
+            <div class="contener">
+                <a href="{$url_base}/compte/index">Compte</a>
+            </div>
+            <div class="contener">
+                <a href="{$url_base}/client/index">Client</a>
+            </div>
+            <div class="contener">
+                Logout
+            </div>
         </div>
-        <div class="contener">
-            <a href="{$url_base}/compte/index">Compte</a>
-        </div>
-        <div class="contener">
-            <a href="{$url_base}/client/index">Client</a>
-        </div>
-        <div class="contener">
-            Logout
-        </div>
-    </div>
-</aside>
+    </aside>
 <!--=========Fin sideBarre============-->
 
 <!--=========Contenu du body==========-->
-<article class="content">
-    <fieldset>
-        <legend>Creation Client</legend>
-        <form class="form" onsubmit="return post()" method="post" action="{$url_base}Client/add">
-            <div>
-                <select name="typeclient" id="typeclient" class="slct selectclt" onchange="typeClient()">
-                    <option value="0">--Choix du Type de Client--</option>
-                    <option value="1">1- Client Physique</option>
-                    <option value="2">2- Client Moral</option>
-                </select>
-            </div>
-            <div class="formulaire">
+    <article class="content">
+        <fieldset>
+            <legend>Creation Client</legend>
+            <form class="form" onsubmit="return post()" method="post" action="{$url_base}Client/add">
                 <div>
-                    <fieldset id="cm" hidden>
-                        <legend>Client Moral</legend>
-                        <div class="row">
-                            <label for="nomCM">Nom</label>
-                            <input type="text" class="inputcl" id="nomCM" name="nomCM"/>
-                            <label for="adresseCM">Adresse</label>
-                            <input type="text" class="inputcl" id="adresseCM" name="adresseCM"/>
-                        </div>
-                        <div class="row">
-                            <label for="raisonSocialCM">Raison Social</label>
-                            <input type="text" class="inputcl" id="raisonSocialCM" name="raisonSocialCM"/>
-                            <label for="emailCM">Email</label>
-                            <input type="email" class="inputcl" id="emailCM" name="emailCM"/>
-                        </div>
-                        <div class="row">
-                            <label for="identifiantCM">Identifiant</label>
-                            <input type="text" class="inputcl" id="identifiantCM" name="identifiantCM"/>
-                            <label for="telephoneCM">Telephone</label>
-                            <input type="text" class="inputcl" id="telephoneCM" name="telephoneCM"/>
-                        </div>
-                        <div class="row">
-                            <label for="loginCM">Login</label>
-                            <input type="text" class="inputcl" id="loginCM" name="loginCM"/>
-                            <label for="passwdCM">PassWord</label>
-                            <input type="password" class="inputcl" id="passwdCM" name="passwdCM"/>
-                        </div>
-                    </fieldset>
+                    <select name="typeclient" id="typeclient" class="slct selectclt" onchange="typeClient()">
+                        <option value="0">--Choix du Type de Client--</option>
+                        <option value="1">1- Client Physique</option>
+                        <option value="2">2- Client Moral</option>
+                    </select>
                 </div>
+                <div class="formulaire">
+                    <div>
+                        <fieldset id="cm" hidden>
+                            <legend>Client Moral</legend>
+                            <div class="row">
+                                <label for="nomCM">Nom</label>
+                                <input type="text" class="inputcl" id="nomCM" name="nomCM"/>
+                                <label for="adresseCM">Adresse</label>
+                                <input type="text" class="inputcl" id="adresseCM" name="adresseCM"/>
+                            </div>
+                            <div class="row">
+                                <label for="raisonSocialCM">Raison Social</label>
+                                <input type="text" class="inputcl" id="raisonSocialCM" name="raisonSocialCM"/>
+                                <label for="emailCM">Email</label>
+                                <input type="email" class="inputcl" id="emailCM" name="emailCM"/>
+                            </div>
+                            <div class="row">
+                                <label for="identifiantCM">Identifiant</label>
+                                <input type="text" class="inputcl" id="identifiantCM" name="identifiantCM"/>
+                                <label for="telephoneCM">Telephone</label>
+                                <input type="text" class="inputcl" id="telephoneCM" name="telephoneCM"/>
+                            </div>
+                            <div class="row">
+                                <label for="loginCM">Login</label>
+                                <input type="text" class="inputcl" id="loginCM" name="loginCM"/>
+                                <label for="passwdCM">PassWord</label>
+                                <input type="password" class="inputcl" id="passwdCM" name="passwdCM"/>
+                            </div>
+                        </fieldset>
+                    </div>
                 <div>
                     <fieldset id="cp" hidden>
                         <legend>Client Physique</legend>
@@ -143,9 +142,9 @@
                 <button type="reset" class="annuler" id="annuler" disabled>Annuler</button>
             </div>
         </form>
-    </fieldset>
-    <div id="affiche"></div>
-</article>
+        </fieldset>
+        <div id="affiche"></div>
+    </article>
 <script src="{$url_base}/public/js/main.js"></script>
 <script src="{$url_base}/public/js/client.js"></script>
 </body>
