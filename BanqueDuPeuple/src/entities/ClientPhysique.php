@@ -67,14 +67,14 @@ class ClientPhysique
 
     /**
      * Many client_physique have one type_client. This is the owning side.
-     * @ManyToOne(targetEntity="TypeClient", inversedBy="client_physique")
+     * @ManyToOne(targetEntity="TypeClient", inversedBy="client_physique", cascade={"persist"})
      * @JoinColumn(name="typeclient_id", referencedColumnName="id")
      */
     private $type_client;
 
     /**
      * Many client_physique have one client_moral. This is the owning side.
-     * @ManyToOne(targetEntity="ClientMoral", inversedBy="client_physique")
+     * @ManyToOne(targetEntity="ClientMoral", inversedBy="client_physique", cascade={"persist"})
      * @JoinColumn(name="employeur_id", referencedColumnName="id")
      */
     private $client_moral;
@@ -292,8 +292,11 @@ class ClientPhysique
     {
         $this->client_moral = $client_moral;
     }
-
-
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->id." ".$this->nom." ".$this->prenom;
+    }
 
 
 }

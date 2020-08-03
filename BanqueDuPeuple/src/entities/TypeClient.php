@@ -97,6 +97,10 @@ class TypeClient
     {
         $this->client_moral = $client_moral;
     }
-
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->id." ".$this->libelle;
+    }
 
 }

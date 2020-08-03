@@ -100,4 +100,19 @@ class ClientMoralRepository extends Model
             return $this->db->getRepository('ClientMoral')->findAll();
         }
     }
+
+    public function foundById($id)
+    {
+        $list_client=$this->listeOfClients();
+
+        foreach ($list_client as $client)
+        {
+            if($client->getId()==$id)
+            {
+                return $client;
+            }
+        }
+
+        return null;
+    }
 }

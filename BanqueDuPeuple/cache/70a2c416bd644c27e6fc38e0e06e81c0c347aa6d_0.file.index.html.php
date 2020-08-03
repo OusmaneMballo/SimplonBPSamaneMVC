@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-08-03 11:35:23
+/* Smarty version 3.1.30, created on 2020-08-03 12:37:48
   from "/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/client/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f27da5ba2a330_04134569',
+  'unifunc' => 'content_5f27e8fcef8b81_10318861',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70a2c416bd644c27e6fc38e0e06e81c0c347aa6d' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/client/index.html',
-      1 => 1595936804,
+      1 => 1596451052,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f27da5ba2a330_04134569 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f27e8fcef8b81_10318861 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -142,8 +142,24 @@ Client/add">
                             <input type="text" class="inputcl" id="cnicp" name="cnicp"/>
                             <select name="statutcp" id="statutcp" class="slct2 selectclt" onchange="salaryForm()">
                                 <option value="0">--Statut Client--</option>
-                                <option value="1">Salarier </option>
-                                <option value="2">Non Salarier </option>
+                                <?php if (isset($_smarty_tpl->tpl_vars['statuts']->value)) {?>
+                                    <?php if ($_smarty_tpl->tpl_vars['statuts']->value != null) {?>
+                                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['statuts']->value, 'statut');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['statut']->value) {
+?>
+                                            <option value="<?php echo $_smarty_tpl->tpl_vars['statut']->value->getId();?>
+"><?php echo $_smarty_tpl->tpl_vars['statut']->value->getLibelle();?>
+</option>
+                                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                                    <?php }?>
+                                <?php }?>
                             </select>
                         </div>
                         <div class="row" id="salarier" hidden>
@@ -151,9 +167,25 @@ Client/add">
                             <input type="text" class="inputcl" id="salairecp" name="salairecp"/>
                             <select name='employeur' id='employeur' class='slct2 selectclt' onchange='employeurForm()'>
                                 <option value='0'>--Employer--</option>
-                                <option value='1'>Empleur1</option>
-                                <option value='2'>Empleur1</option>
-                                <option value='3'>Ajouter son employeur</option>
+                                <?php if (isset($_smarty_tpl->tpl_vars['listClientMorals']->value)) {?>
+                                    <?php if ($_smarty_tpl->tpl_vars['listClientMorals']->value != null) {?>
+                                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listClientMorals']->value, 'employeur');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['employeur']->value) {
+?>
+                                            <option value="<?php echo $_smarty_tpl->tpl_vars['statut']->value->getId();?>
+"><?php echo $_smarty_tpl->tpl_vars['employeur']->value->getNom();?>
+</option>
+                                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                                    <?php }?>
+                                <?php }?>
+                                <option value='-1'>Ajouter son employeur</option>
                             </select>
                         </div>
                     </fieldset>

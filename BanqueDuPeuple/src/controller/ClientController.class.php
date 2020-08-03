@@ -2,6 +2,7 @@
 use \libs\system\Controller;
 use src\model\ClientMoralRepository;
 use src\model\ClientPhysiqueRepository;
+use src\model\TypeClientRepository;
 
 class ClientController extends Controller
 {
@@ -11,7 +12,12 @@ class ClientController extends Controller
 
     public function index()
     {
-        return $this->view->load("client/index");
+        $typeClient=new TypeClientRepository();
+        $clientMoral=new ClientMoralRepository();
+
+        $data['listClientMorals']=$clientMoral->listeOfClients();
+        $data['statuts']=$typeClient->listeOfStatuts();
+        return $this->view->load("client/index",$data);
     }
 
     //=======Ajouter un client===============
@@ -40,7 +46,9 @@ class ClientController extends Controller
     public function addCP()
     {
         $client_physique_repos=new ClientPhysiqueRepository();
+        $client_Moral_repos=new ClientMoralRepository();
         $client=new ClientPhysique();
+        $typeClientRepos=new TypeClientRepository();
 
         $client->setNom($_POST['nomcp']);
         $client->setPrenom($_POST['prenomcp']);
@@ -48,10 +56,10 @@ class ClientController extends Controller
         $client->setProfession($_POST['professioncp']);
         $client->setTelephone($_POST['telephonecp']);
         $client->setAdresse($_POST['adressecp']);
-        $client->getLogin($_POST['logincp']);
+        $client->setLogin($_POST['logincp']);
         $client->setPasswd($_POST['passwdcp']);
         $client->setEmail($_POST['emailcp']);
-        $client->setTypeClient($_POST['statutcp']);
+        $client->setTypeClient($typeClientRepos->findById($_POST['statutcp']));
 
         if($_POST['statutcp']==1)
         {
@@ -64,7 +72,12 @@ class ClientController extends Controller
                 /*cas d'un salarier dont son employeur n'est pas
                 un client de la banque*/
 
-                $client->setClientMoral(null);
+                $idEmp=$this->addCM();
+                $client->setClientMoral($client_Moral_repos->foundById($idEmp));
+            }
+            else
+            {
+                $client->setClientMoral($client_Moral_repos->foundById($_POST['employeur']));
             }
         }
         return $client_physique_repos->addClient($client);
@@ -74,6 +87,7 @@ class ClientController extends Controller
     {
         $client_physique_repos=new ClientPhysiqueRepository();
         $client_moral_Repos=new ClientMoralRepository();
+        $typeClient=new TypeClientRepository();
         $data['resultat']=0;
         if(isset($_POST))
         {
@@ -81,20 +95,18 @@ class ClientController extends Controller
             {
                 //Cas d'un client moral
                 $data['resultat']=$this->addCM();
-                return $this->view->load('client/index',$data);
             }
             else
             {
                 //Cas d'un client physique
 
                 $data['resultat']=$this->addCP();
-                return $this->view->load('client/index',$data);
             }
 
         }
-
-        $data['listclientMoral']=$client_moral_Repos->listeOfClients();
+        $data['listClientMorals']=$client_moral_Repos->listeOfClients();
         $data['listclientPhysique']=$client_physique_repos->listeOfClients();
+        $data['statuts']=$typeClient->listeOfStatuts();
 
         return $this->view->load("client/index",$data);
     }

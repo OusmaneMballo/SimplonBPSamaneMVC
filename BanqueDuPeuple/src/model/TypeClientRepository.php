@@ -61,12 +61,26 @@ class TypeClientRepository extends Model
         }
     }
 
-    public function listeOfClients()
+    public function listeOfStatuts()
     {
         if($this->db != null)
         {
             return $this->db->getRepository('TypeClient')->findAll();
         }
+    }
+
+    public function findById($id)
+    {
+        $list=$this->listeOfStatuts();
+
+        foreach ($list as $type)
+        {
+            if($type->getId()==$id)
+            {
+                return $type;
+            }
+        }
+        return null;
     }
 
 
