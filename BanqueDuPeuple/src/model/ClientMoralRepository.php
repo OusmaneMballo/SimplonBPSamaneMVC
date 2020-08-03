@@ -4,7 +4,9 @@
 namespace src\model;
 
 
-class ClientMoralRepository
+use libs\system\Model;
+
+class ClientMoralRepository extends Model
 {
     public function __construct(){
         parent::__construct();

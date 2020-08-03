@@ -23,23 +23,21 @@ class ClientController extends Controller
         $client_moral_Repos=new ClientMoralRepository();
         $client=new ClientMoral();
 
-        $client->setEmail($_POST['email']);
-        $client->setPasswd($_POST['passwd']);
-        $client->setLogin($_POST['login']);
-        $client->setNom($_POST['nom']);
-        $client->setPrenom($_POST['prenom']);
-        $client->setAdresse($_POST['adresse']);
-        $client->setTelephone($_POST['telephone']);
-        $client->setNumIdentifiant($_POST['nci']);
-        $client->setRaisonsocial($_POST['social']);
-        $client->setClientPhysique($_POST['social']);
+        $client->setEmail($_POST['emailCM']);
+        $client->setPasswd($_POST['passwdCM']);
+        $client->setLogin($_POST['loginCM']);
+        $client->setNom($_POST['nomCM']);
+        $client->setAdresse($_POST['adresseCM']);
+        $client->setTelephone($_POST['telephoneCM']);
+        $client->setNumIdentifiant($_POST['identifiantCM']);
+        $client->setRaisonsocial($_POST['raisonSocialCM']);
 
         return $client_moral_Repos->addClient($client);
     }
 
     //=======Ajouter un client Physique===========
 
-    public function addPM()
+    public function addCP()
     {
         $client_physique_repos=new ClientPhysiqueRepository();
         $client=new ClientPhysique();
@@ -89,7 +87,7 @@ class ClientController extends Controller
             {
                 //Cas d'un client physique
 
-                $data['resultat']=$this->addPM();
+                $data['resultat']=$this->addCP();
                 return $this->view->load('client/index',$data);
             }
 
