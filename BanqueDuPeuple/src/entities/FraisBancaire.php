@@ -2,39 +2,39 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="frais_bancaire")
+ * @Entity
+ * @Table(name="frais_bancaire")
  */
 class FraisBancaire
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @Column(type="integer")
      */
     private $frai;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $date;
 
     /**
      * Many frais_bancaire have one type_frais. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="TypeFrais", inversedBy="frai_bancaire")
-     * @ORM\JoinColumn(name="typefrai_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="TypeFrais", inversedBy="frai_bancaire")
+     * @JoinColumn(name="typefrai_id", referencedColumnName="id")
      */
     private $type_frai;
 
     /**
      * Many frais_bancaire have one compte. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="Compte", inversedBy="frai_bancaire")
-     * @ORM\JoinColumn(name="compte_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="Compte", inversedBy="frai_bancaire")
+     * @JoinColumn(name="compte_id", referencedColumnName="id")
      */
     private $compte;
 

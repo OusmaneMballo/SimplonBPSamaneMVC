@@ -18,7 +18,7 @@ $choix = "ORM";
 $etat = 'on'; //on or off
 
 $orm = array(
-              'dbname' => 'groupe2_BP_ns',//change your database name
+              'dbname' => 'simplon_banque_du_peuple_samane',//change your database name
               'user'     => 'root',
               'password' => '',
               'host' => '127.0.0.1',

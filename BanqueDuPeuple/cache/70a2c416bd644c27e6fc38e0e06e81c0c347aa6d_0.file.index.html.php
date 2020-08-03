@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-07-27 17:01:44
+/* Smarty version 3.1.30, created on 2020-08-03 11:35:23
   from "/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/client/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f1eec58ec45d9_05647971',
+  'unifunc' => 'content_5f27da5ba2a330_04134569',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70a2c416bd644c27e6fc38e0e06e81c0c347aa6d' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/client/index.html',
-      1 => 1595862092,
+      1 => 1595936804,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f1eec58ec45d9_05647971 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f27da5ba2a330_04134569 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +49,8 @@ function content_5f1eec58ec45d9_05647971 (Smarty_Internal_Template $_smarty_tpl)
 /public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
         <p class="mail">xywzt@gmail.com</p>
         <div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
-            Dashboard
+            <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/welcome/index">Dashboard</a>
         </div>
         <div class="contener">
             <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
@@ -70,7 +71,8 @@ function content_5f1eec58ec45d9_05647971 (Smarty_Internal_Template $_smarty_tpl)
 <article class="content">
     <fieldset>
         <legend>Creation Client</legend>
-        <form class="form" onsubmit="return post()" method="post" action="traittementclient.php">
+        <form class="form" onsubmit="return post()" method="post" action="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Client/add">
             <div>
                 <select name="typeclient" id="typeclient" class="slct selectclt" onchange="typeClient()">
                     <option value="0">--Choix du Type de Client--</option>

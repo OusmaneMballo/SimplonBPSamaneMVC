@@ -3,85 +3,85 @@
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 /**
- * @ORM\Entity
- * @ORM\Table(name="client_physique")
+ * @Entity
+ * @Table(name="client_physique")
  */
 class ClientPhysique
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $nom;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $prenom;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $telephone;
 
     /**
-     * @ORM\Column(type="integer")
+     * @Column(type="integer")
      */
     private $salaire;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $adresse;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $login;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $passwd;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $profession;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $nci;
 
     /**
      * Many client_physique have one type_client. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="TypeClient", inversedBy="client_physique")
-     * @ORM\JoinColumn(name="typeclient_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="TypeClient", inversedBy="client_physique")
+     * @JoinColumn(name="typeclient_id", referencedColumnName="id")
      */
     private $type_client;
 
     /**
      * Many client_physique have one client_moral. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="ClientMoral", inversedBy="client_physique")
-     * @ORM\JoinColumn(name="employeur_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="ClientMoral", inversedBy="client_physique")
+     * @JoinColumn(name="employeur_id", referencedColumnName="id")
      */
     private $client_moral;
 
     /**
      * One client_physique has many compte. This is the inverse side.
-     * @ORM\OneToMany(targetEntity="Compte", mappedBy="client_physique")
+     * @OneToMany(targetEntity="Compte", mappedBy="client_physique")
      */
     private $compte;
 

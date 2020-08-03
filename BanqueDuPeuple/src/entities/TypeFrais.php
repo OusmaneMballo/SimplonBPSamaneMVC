@@ -2,25 +2,25 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="type_frais")
+ * @Entity
+ * @Table(name="type_frais")
  */
 class TypeFrais
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $libelle;
 
     /**
-     * @ORM\Column(type="integer")
+     * @Column(type="integer")
      */
     private $frai;
 

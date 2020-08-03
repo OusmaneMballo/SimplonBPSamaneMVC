@@ -3,82 +3,82 @@
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 /**
- * @ORM\Entity
- * @ORM\Table(name="compte")
+ * @Entity
+ * @Table(name="compte")
  */
 class Compte
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $numero;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $cleRip;
 
     /**
-     * @ORM\Column(type="integer")
+     * @Column(type="integer")
      */
     private $solde;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $etat;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $dateCreation;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $dateFermeture;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $dateFerTempo;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $dateReouverture;
 
     /**
      * Many compte have one type_compte. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="TypeCompteRepository", inversedBy="compte")
-     * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="TypeCompte", inversedBy="compte")
+     * @JoinColumn(name="type_id", referencedColumnName="id")
      */
-    private $type;
+    private $type_compte;
 
     /**
      * One compte has many frais_bancaire. This is the inverse side.
-     * @ORM\OneToMany(targetEntity="FraisBancaire", mappedBy="compte")
+     * @OneToMany(targetEntity="FraisBancaire", mappedBy="compte")
      */
     private $frai_bancaire;
 
     /**
      * Many compte have one client_physique. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="ClientPhysique", inversedBy="compte")
-     * @ORM\JoinColumn(name="cltPhysique_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="ClientPhysique", inversedBy="compte")
+     * @JoinColumn(name="cltPhysique_id", referencedColumnName="id")
      */
     private $client_physique;
 
     /**
      * Many compte have one client_moral. This is the owning side.
-     * @ORM\ManyToOne(targetEntity="ClientMoral", inversedBy="compte")
-     * @ORM\JoinColumn(name="clttMoral_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="ClientMoral", inversedBy="compte")
+     * @JoinColumn(name="clttMoral_id", referencedColumnName="id")
      */
     private $client_moral;
 
@@ -205,17 +205,17 @@ class Compte
     /**
      * @return mixed
      */
-    public function getType()
+    public function getTypeCompte()
     {
-        return $this->type;
+        return $this->type_compte;
     }
 
     /**
-     * @param mixed $type
+     * @param mixed $type_compte
      */
-    public function setType($type)
+    public function setTypeCompte($type_compte)
     {
-        $this->type = $type;
+        $this->type_compte = $type_compte;
     }
 
     /**

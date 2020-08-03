@@ -4,26 +4,26 @@ use Doctrine\ORM\Mapping as ORM;
 use \Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="type_compte")
+ * @Entity
+ * @Table(name="type_compte")
  */
 class TypeCompte
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $libelle;
 
     /**
      * One type_compte has many compte. This is the inverse side.
-     * @ORM\OneToMany(targetEntity="Compte", mappedBy="type_compte")
+     * @OneToMany(targetEntity="Compte", mappedBy="type_compte")
      */
     private $compte;
 

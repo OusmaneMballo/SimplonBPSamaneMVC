@@ -4,32 +4,32 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="type_client")
+ * @Entity
+ * @Table(name="type_client")
  */
 class TypeClient
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @Column(type="string")
      */
     private $libelle;
 
     /**
      * One type_client has many client_physique. This is the inverse side.
-     * @ORM\OneToMany(targetEntity="ClientPhysique", mappedBy="type_client")
+     * @OneToMany(targetEntity="ClientPhysique", mappedBy="type_client")
      */
     private $client_physique;
 
     /**
      * One type_client has many client_moral. This is the inverse side.
-     * @ORM\OneToMany(targetEntity="ClientMoral", mappedBy="type_client")
+     * @OneToMany(targetEntity="ClientMoral", mappedBy="type_client")
      */
     private $client_moral;
 

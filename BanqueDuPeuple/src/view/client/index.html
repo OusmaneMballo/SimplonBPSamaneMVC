@@ -22,7 +22,7 @@
         <img src="{$url_base}/public/image/profil.jpg" class="profil" alt="Banque du Peuple" srcset=""/>
         <p class="mail">xywzt@gmail.com</p>
         <div class="contener" style="background-color: rgb(85, 163, 231); color: white;">
-            Dashboard
+            <a href="{$url_base}/welcome/index">Dashboard</a>
         </div>
         <div class="contener">
             <a href="{$url_base}/compte/index">Compte</a>
@@ -41,7 +41,7 @@
 <article class="content">
     <fieldset>
         <legend>Creation Client</legend>
-        <form class="form" onsubmit="return post()" method="post" action="traittementclient.php">
+        <form class="form" onsubmit="return post()" method="post" action="{$url_base}Client/add">
             <div>
                 <select name="typeclient" id="typeclient" class="slct selectclt" onchange="typeClient()">
                     <option value="0">--Choix du Type de Client--</option>
