@@ -51,7 +51,7 @@ function frais(){
     }
     else {
         if (type === "Courant") {
-            document.getElementById('frai').innerHTML = '600F cfa';
+            document.getElementById('frai').innerHTML = '700F cfa';
         }
         else {
             document.getElementById('frai').innerHTML = '0F cfa';

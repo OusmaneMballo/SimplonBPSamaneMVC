@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-08-03 11:35:09
+/* Smarty version 3.1.30, created on 2020-08-03 17:23:54
   from "/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/welcome/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f27da4d366d31_26751805',
+  'unifunc' => 'content_5f282c0a615e06_28465944',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f27da4d366d31_26751805 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f282c0a615e06_28465944 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

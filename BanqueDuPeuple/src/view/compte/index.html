@@ -42,7 +42,7 @@
 <article class="content">
     <fieldset>
         <legend>Creation Compte</legend>
-        <form action="" class="form">
+        <form action="{$url_base}Compte/add" class="form" method="post">
             <div class="row">
                 <select name="typecp" class="selectcmpt" id="typecp" onchange="frais()">
                     <option value="0">--Type Compte--</option>
@@ -51,15 +51,21 @@
                             <option value="{$frais->getId()}">{$frais->getLibelle()}</option>
                         {/foreach}
                     {/if}
-                    <!--<option value="1">Epargne</option>
-                    <option value="2">Xewel</option>
-                    <option value="3">Courant</option>
-                    <option value="4">Bloquer</option>-->
                 </select>
                 <select name="client" id="client" class="slct">
-                    <option value="0">--Clients--</option>
-                    <option value="1">Client1</option>
-                    <option value="2">Client2</option>
+                    <option value="0">--------------Clients--------------</option>
+                    <option value="0"><b>------List Clients Morals-------</b></option>
+                    {if $listFrais != null}
+                        {foreach from=$listClientM item=cltMoral}
+                            <option value="{$cltMoral->getId()}">{$cltMoral->getId()}-{$cltMoral->getNom()}</option>
+                        {/foreach}
+                    {/if}
+                    <option value="0"><b>------List Clients Physiques------</b></option>
+                    {if $listClientP != null}
+                        {foreach from=$listClientP item=cltPhysique}
+                            <option value="{$cltPhysique->getId()}">{$cltPhysique->getId()}-{$cltPhysique->getPrenom()} {$cltPhysique->getNom()}</option>
+                        {/foreach}
+                    {/if}
                 </select>
             </div>
             <div class="row">

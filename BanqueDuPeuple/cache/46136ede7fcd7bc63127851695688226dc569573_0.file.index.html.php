@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-08-03 17:03:24
+/* Smarty version 3.1.30, created on 2020-08-03 17:36:41
   from "/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/compte/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f28273c7fe3a4_31295187',
+  'unifunc' => 'content_5f282f09ad42c3_90911918',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46136ede7fcd7bc63127851695688226dc569573' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/compte/index.html',
-      1 => 1596466995,
+      1 => 1596468998,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f28273c7fe3a4_31295187 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f282f09ad42c3_90911918 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,9 +99,44 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                     <option value="4">Bloquer</option>-->
                 </select>
                 <select name="client" id="client" class="slct">
-                    <option value="0">--Clients--</option>
-                    <option value="1">Client1</option>
-                    <option value="2">Client2</option>
+                    <option value="0">--------------Clients--------------</option>
+                    <option value="0"><b>------List Clients Morals-------</b></option>
+                    <?php if ($_smarty_tpl->tpl_vars['listFrais']->value != null) {?>
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listClientM']->value, 'cltMoral');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['cltMoral']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getId();?>
+"><?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getId();?>
+-<?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getNom();?>
+</option>
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                    <?php }?>
+                    <option value="0"><b>------List Clients Physiques------</b></option>
+                    <?php if ($_smarty_tpl->tpl_vars['listClientP']->value != null) {?>
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listClientP']->value, 'cltPhysique');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['cltPhysique']->value) {
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getId();?>
+"><?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getId();?>
+-<?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getPrenom();?>
+ <?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getNom();?>
+</option>
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                    <?php }?>
                 </select>
             </div>
             <div class="row">
