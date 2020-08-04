@@ -103,4 +103,19 @@ class ClientPhysiqueRepository extends Model
         }
     }
 
+    public function findById($id)
+    {
+        $list_client=$this->listeOfClients();
+
+        foreach ($list_client as $client)
+        {
+            if($client->getId()==$id)
+            {
+                return $client;
+            }
+        }
+
+        return null;
+    }
+
 }

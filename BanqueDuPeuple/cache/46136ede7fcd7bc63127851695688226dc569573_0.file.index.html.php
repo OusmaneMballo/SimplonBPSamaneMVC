@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-08-03 17:36:41
+/* Smarty version 3.1.30, created on 2020-08-04 13:27:25
   from "/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/compte/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f282f09ad42c3_90911918',
+  'unifunc' => 'content_5f29461d3bd802_43455640',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46136ede7fcd7bc63127851695688226dc569573' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Mes Sites/Simplon.co/BanquePeupleSamane/BanqueDuPeuple/src/view/compte/index.html',
-      1 => 1596468998,
+      1 => 1596540442,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f282f09ad42c3_90911918 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f29461d3bd802_43455640 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,45 +73,45 @@ function content_5f282f09ad42c3_90911918 (Smarty_Internal_Template $_smarty_tpl)
 <article class="content">
     <fieldset>
         <legend>Creation Compte</legend>
-        <form action="" class="form">
+        <form action="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Compte/add" class="form" method="post" onsubmit="return post()">
             <div class="row">
                 <select name="typecp" class="selectcmpt" id="typecp" onchange="frais()">
                     <option value="0">--Type Compte--</option>
-                    <?php if ($_smarty_tpl->tpl_vars['listFrais']->value != null) {?>
-                        <?php
+                        <?php if ($_smarty_tpl->tpl_vars['listFrais']->value != null) {?>
+                            <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listFrais']->value, 'frais');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['frais']->value) {
 ?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['frais']->value->getId();?>
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['frais']->value->getId();?>
 "><?php echo $_smarty_tpl->tpl_vars['frais']->value->getLibelle();?>
 </option>
-                        <?php
+                            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-                    <?php }?>
-                    <!--<option value="1">Epargne</option>
-                    <option value="2">Xewel</option>
-                    <option value="3">Courant</option>
-                    <option value="4">Bloquer</option>-->
+                        <?php }?>
                 </select>
-                <select name="client" id="client" class="slct">
+                <label for="frai">Frais:<b id="frai"></b></label>
+            </div>
+            <div class="row">
+                <select name="client" id="client" class="selectcmpt">
                     <option value="0">--------------Clients--------------</option>
                     <option value="0"><b>------List Clients Morals-------</b></option>
                     <?php if ($_smarty_tpl->tpl_vars['listFrais']->value != null) {?>
-                        <?php
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listClientM']->value, 'cltMoral');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['cltMoral']->value) {
 ?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getId();?>
-"><?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getId();?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getId();?>
+-cm"><?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getId();?>
 -<?php echo $_smarty_tpl->tpl_vars['cltMoral']->value->getNom();?>
 </option>
-                        <?php
+                    <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
@@ -120,17 +120,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                     <?php }?>
                     <option value="0"><b>------List Clients Physiques------</b></option>
                     <?php if ($_smarty_tpl->tpl_vars['listClientP']->value != null) {?>
-                        <?php
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listClientP']->value, 'cltPhysique');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['cltPhysique']->value) {
 ?>
-                            <option value="<?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getId();?>
-"><?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getId();?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getId();?>
+-cp"><?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getId();?>
 -<?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getPrenom();?>
  <?php echo $_smarty_tpl->tpl_vars['cltPhysique']->value->getNom();?>
 </option>
-                        <?php
+                    <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
@@ -138,12 +138,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
                     <?php }?>
                 </select>
+                <label for="solde">Solde</label>
+                <input type="text" class="inputcl" id="solde" name="solde" required/>
             </div>
             <div class="row">
-                <label for="frai">Frais:<b id="frai"></b></label>
-            </div>
-            <div class="row">
-                <button type="button" class="valider" onclick="post()">Ajouter</button>
+                <button type="submit" class="valider">Ajouter</button>
                 <button type="reset" class="annuler">Annuler</button>
             </div>
         </form>

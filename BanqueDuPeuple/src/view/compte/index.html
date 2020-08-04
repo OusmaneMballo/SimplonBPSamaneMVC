@@ -42,37 +42,39 @@
 <article class="content">
     <fieldset>
         <legend>Creation Compte</legend>
-        <form action="{$url_base}Compte/add" class="form" method="post">
+        <form action="{$url_base}Compte/add" class="form" method="post" onsubmit="return post()">
             <div class="row">
                 <select name="typecp" class="selectcmpt" id="typecp" onchange="frais()">
                     <option value="0">--Type Compte--</option>
-                    {if $listFrais != null}
-                        {foreach from=$listFrais item=frais}
-                            <option value="{$frais->getId()}">{$frais->getLibelle()}</option>
-                        {/foreach}
-                    {/if}
+                        {if $listFrais != null}
+                            {foreach from=$listFrais item=frais}
+                                <option value="{$frais->getId()}">{$frais->getLibelle()}</option>
+                            {/foreach}
+                        {/if}
                 </select>
-                <select name="client" id="client" class="slct">
-                    <option value="0">--------------Clients--------------</option>
-                    <option value="0"><b>------List Clients Morals-------</b></option>
-                    {if $listFrais != null}
-                        {foreach from=$listClientM item=cltMoral}
-                            <option value="{$cltMoral->getId()}">{$cltMoral->getId()}-{$cltMoral->getNom()}</option>
-                        {/foreach}
-                    {/if}
-                    <option value="0"><b>------List Clients Physiques------</b></option>
-                    {if $listClientP != null}
-                        {foreach from=$listClientP item=cltPhysique}
-                            <option value="{$cltPhysique->getId()}">{$cltPhysique->getId()}-{$cltPhysique->getPrenom()} {$cltPhysique->getNom()}</option>
-                        {/foreach}
-                    {/if}
-                </select>
-            </div>
-            <div class="row">
                 <label for="frai">Frais:<b id="frai"></b></label>
             </div>
             <div class="row">
-                <button type="button" class="valider" onclick="post()">Ajouter</button>
+                <select name="client" id="client" class="selectcmpt">
+                    <option value="0">--------------Clients--------------</option>
+                    <option value="0"><b>------List Clients Morals-------</b></option>
+                    {if $listFrais != null}
+                    {foreach from=$listClientM item=cltMoral}
+                    <option value="{$cltMoral->getId()}-cm">{$cltMoral->getId()}-{$cltMoral->getNom()}</option>
+                    {/foreach}
+                    {/if}
+                    <option value="0"><b>------List Clients Physiques------</b></option>
+                    {if $listClientP != null}
+                    {foreach from=$listClientP item=cltPhysique}
+                    <option value="{$cltPhysique->getId()}-cp">{$cltPhysique->getId()}-{$cltPhysique->getPrenom()} {$cltPhysique->getNom()}</option>
+                    {/foreach}
+                    {/if}
+                </select>
+                <label for="solde">Solde</label>
+                <input type="text" class="inputcl" id="solde" name="solde" required/>
+            </div>
+            <div class="row">
+                <button type="submit" class="valider">Ajouter</button>
                 <button type="reset" class="annuler">Annuler</button>
             </div>
         </form>
